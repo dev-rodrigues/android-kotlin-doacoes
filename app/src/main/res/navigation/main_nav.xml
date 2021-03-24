@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/autenticacaoFragment">
+
+    <fragment
+        android:id="@+id/autenticacaoFragment"
+        android:name="br.com.assessmentfundamentoskotlin.ui.autenticacao.AutenticacaoFragment"
+        android:label="fragment_autenticacao"
+        tools:layout="@layout/fragment_autenticacao" >
+        <action
+            android:id="@+id/action_autenticacaoFragment_to_listaDoacaoFragment"
+            app:destination="@id/listaDoacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaDoacaoFragment"
+        android:name="br.com.assessmentfundamentoskotlin.ui.doacao.lista.ListaDoacaoFragment"
+        android:label="lista_doacao_fragment"
+        tools:layout="@layout/lista_doacao_fragment" >
+        <action
+            android:id="@+id/action_listaDoacaoFragment_to_persistDoacaoFragment"
+            app:destination="@id/persistDoacaoFragment" />
+        <action
+            android:id="@+id/action_listaDoacaoFragment_to_showDoacaoFragment"
+            app:destination="@id/showDoacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/persistDoacaoFragment"
+        android:name="br.com.assessmentfundamentoskotlin.ui.doacao.persist.PersistDoacaoFragment"
+        android:label="persist_doacao_fragment"
+        tools:layout="@layout/persist_doacao_fragment" >
+        <action
+            android:id="@+id/action_persistDoacaoFragment_to_listaDoacaoFragment"
+            app:destination="@id/listaDoacaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDoacaoFragment"
+        android:name="br.com.assessmentfundamentoskotlin.ui.doacao.show.ShowDoacaoFragment"
+        android:label="fragment_show_doacao"
+        tools:layout="@layout/fragment_show_doacao" >
+        <action
+            android:id="@+id/action_showDoacaoFragment_to_listaDoacaoFragment"
+            app:destination="@id/listaDoacaoFragment" />
+    </fragment>
+</navigation>
