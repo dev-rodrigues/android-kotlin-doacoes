@@ -1,3 +1,7 @@
 package br.com.assessmentfundamentoskotlin.ui.model
 
-class Doacao (var nome : String, var endereco : String)
+import android.net.Uri
+
+class Doacao (var nome : String, var endereco : String, var img: Uri?) {
+
+}
